@@ -29,13 +29,13 @@
 
 ---
 
-## 精选项目
+## 精选项目（公开可点）
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### ⚖️ fakao-grader
+### ⚖️ [fakao-grader](https://github.com/1438388098-glitch/fakao-grader)
 **法考主观题 AI 评卷老师（Agent Skill）**
 
 按官方采分点逐点判分，不是印象分：
@@ -49,7 +49,7 @@
 </td>
 <td width="50%" valign="top">
 
-### 📚 zhuma-fakao-review
+### 📚 [zhuma-fakao-review](https://github.com/1438388098-glitch/zhuma-fakao-review)
 **法考错题 → 可背诵知识笔记 PDF**
 
 全量错题抓取后，按知识点合并去重，生成分册 PDF：
@@ -64,20 +64,7 @@
 <tr>
 <td width="50%" valign="top">
 
-### 🔍 legal-wisdom-app
-**法律智库 · 263 部法条本地检索 + AI 问答**
-
-法条全文检索增强的法律问答桌面应用：
-- SQLite FTS5 全文检索 + 关键词高亮
-- 阅读时「结合当前法条」向模型提问
-- 法条关联推荐与跳转
-
-`RAG 思路` · `FTS5` · `PySide6` · `LLM API`
-
-</td>
-<td width="50%" valign="top">
-
-### 🌐 pdf-legal-zh-translator
+### 🌐 [pdf-legal-zh-translator](https://github.com/1438388098-glitch/pdf-legal-zh-translator)
 **政治/法律长文 PDF 英→中专业翻译 Skill**
 
 面向数百页条约、判决、政策文件：
@@ -89,19 +76,29 @@
 `Long-doc LLM` · `Glossary Sync` · `Quality Gate`
 
 </td>
+<td width="50%" valign="top">
+
+### 🎮 [level-design-master](https://github.com/1438388098-glitch/level-design-master)
+**2D 平台 / 银河城关卡设计 AI Skill**
+
+把关卡设计知识拆成可调用的领域 Skill，体现：
+- 领域知识 → 结构化约束 → 生成
+- 中文场景下的可复用 Skill 工程
+
+`Skill Design` · `Game Design` · `AI 辅助创作`
+
+</td>
 </tr>
 </table>
 
-**更多法律 AI 实验**：[`JurisCoT`](https://github.com/1438388098-glitch/JurisCoT)（法学思维链推理引擎）· [`fakao-tracker`](https://github.com/1438388098-glitch/fakao-tracker)
+### 其他公开实验
 
----
-
-## 数据思维（不只会调 API）
-
-| 项目 | 在做什么 |
-|------|----------|
-| [`stock-db`](https://github.com/1438388098-glitch/stock-db) | A 股量化平台：千万级日线中台 → 双信号链 → 生产选股；调度、门禁、决策日志齐全 |
-| [`qq-sentiment-monitor`](https://github.com/1438388098-glitch/qq-sentiment-monitor) | 社群情绪采集 → 分析 pipeline → Fear & Greed 日报看板 |
+| 仓库 | 说明 |
+|------|------|
+| [auto-iterate-project](https://github.com/1438388098-glitch/auto-iterate-project) | 项目自动迭代 / 自我改进工作流实验 |
+| [playlist-analysis](https://github.com/1438388098-glitch/playlist-analysis) | 歌单数据分析与可视化 |
+| [zhcrypt](https://github.com/1438388098-glitch/zhcrypt) | 中文文本加解密与编码实验 |
+| [maze-game](https://github.com/1438388098-glitch/maze-game) | 零依赖 2D 迷宫小游戏 |
 
 ---
 
@@ -115,7 +112,7 @@ AI 应用     Prompt / CoT 工程 · Multi-Agent 编排 · Agent Skills · RAG �
 产品习惯    从真实场景倒推能力边界 · 先锁验收再扩功能 · 文档与防呆写进仓库
 ```
 
-**常用 AI 产品与接口**：Claude Code / ZCode 等 Agent CLI，DeepSeek、OpenAI、智谱、SiliconFlow 等模型 API；在真实项目中对比过成本、稳定性与可审查性。
+**常用 AI 产品与接口**：Claude Code / ZCode 等 Agent CLI；DeepSeek、OpenAI、智谱、SiliconFlow 等模型 API。在真实项目里对比过成本、稳定性与可审查性，而不是只停留在会聊天。
 
 ---
 
@@ -123,7 +120,7 @@ AI 应用     Prompt / CoT 工程 · Multi-Agent 编排 · Agent Skills · RAG �
 
 这是我做法律 AI 时的硬约束，也是简历里愿意被追问的部分：
 
-1. **结构先于生成**——采分点、术语表、法条原文先结构化，再交给模型填空/对照，而不是端到端黑盒打分
+1. **结构先于生成**——采分点、术语表、法条原文先结构化，再交给模型对照/填空，而不是端到端黑盒打分
 2. **可校验优于好听**——页覆盖、分值合计、术语回填用脚本硬校验；宁可 pipeline 失败，也不输出「看起来很完整」的假结果
 3. **人审不可省**——模型产出定位为「初稿 / 辅助判分 / 检索摘要」，最终解释权仍在官方规则与人类专家
 4. **幻觉要可追责**——引用保留原文锚点，中低置信强制复核，禁止静默吞掉异常
@@ -141,7 +138,7 @@ AI 应用     Prompt / CoT 工程 · Multi-Agent 编排 · Agent Skills · RAG �
 ## 联系与说明
 
 - 欢迎法律科技 / 法务科技 / AI 应用方向的交流与内推
-- 仓库中的工具均为个人学习与效率实验；涉及考试、法条、数据的场景均以官方渠道与人工判断为准
+- 涉及考试、法条、数据的场景均以官方渠道与人工判断为准；AI 产出为辅助，不构成法律意见或官方评分
 
 <div align="center">
 
