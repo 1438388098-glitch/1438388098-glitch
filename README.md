@@ -81,7 +81,7 @@
 <td width="50%" valign="top">
 
 ### 🔍 [legal-wisdom-app](https://github.com/1438388098-glitch/legal-wisdom-app)
-**法律智库 · 263 部法条检索 + AI 问答**
+**法律智库 · 250+ 部法条检索 + AI 问答**
 
 法条全文检索增强的法律问答桌面应用：
 - SQLite FTS5 全文检索 + 关键词高亮
