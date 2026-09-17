@@ -29,7 +29,7 @@
 
 ---
 
-## 精选项目（公开可点）
+## 精选项目
 
 <table>
 <tr>
@@ -64,6 +64,19 @@
 <tr>
 <td width="50%" valign="top">
 
+### 🔍 [legal-wisdom-app](https://github.com/1438388098-glitch/legal-wisdom-app)
+**法律智库 · 263 部法条检索 + AI 问答**
+
+法条全文检索增强的法律问答桌面应用：
+- SQLite FTS5 全文检索 + 关键词高亮
+- 阅读时「结合当前法条」向模型提问
+- 法条关联推荐与一键跳转
+
+`RAG 思路` · `FTS5` · `PySide6` · `LLM API`
+
+</td>
+<td width="50%" valign="top">
+
 ### 🌐 [pdf-legal-zh-translator](https://github.com/1438388098-glitch/pdf-legal-zh-translator)
 **政治/法律长文 PDF 英→中专业翻译 Skill**
 
@@ -76,29 +89,44 @@
 `Long-doc LLM` · `Glossary Sync` · `Quality Gate`
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
-### 🎮 [level-design-master](https://github.com/1438388098-glitch/level-design-master)
-**2D 平台 / 银河城关卡设计 AI Skill**
+### 🧠 [JurisCoT](https://github.com/1438388098-glitch/JurisCoT)
+**法学思维链（CoT）推理引擎**
 
-把关卡设计知识拆成可调用的领域 Skill，体现：
-- 领域知识 → 结构化约束 → 生成
-- 中文场景下的可复用 Skill 工程
+按论文类型结构化生成推理链与学术段落：
+- 理论辨析 / 案例分析 / 制度比较 / 实证 / 立法建议 / 综述
+- 输入法律问题 + 法条/案例/域外法 → 输出可验收 CoT
 
-`Skill Design` · `Game Design` · `AI 辅助创作`
+`Chain-of-Thought` · `Legal NLP` · `Python Package`
+
+</td>
+<td width="50%" valign="top">
+
+### 📊 [stock-db](https://github.com/1438388098-glitch/stock-db) · [qq-sentiment-monitor](https://github.com/1438388098-glitch/qq-sentiment-monitor)
+**数据思维：量化中台 + 情绪 Pipeline**
+
+不只是调 API，也做可调度的数据系统：
+- stock-db：千万级日线中台 → 双信号链 → 生产选股与门禁
+- qq-sentiment-monitor：采集 → 分析 → Fear & Greed 日报看板
+
+`Data Pipeline` · `Quant` · `Sentiment` · `Dashboard`
 
 </td>
 </tr>
 </table>
 
-### 其他公开实验
+### 更多
 
 | 仓库 | 说明 |
 |------|------|
-| [auto-iterate-project](https://github.com/1438388098-glitch/auto-iterate-project) | 项目自动迭代 / 自我改进工作流实验 |
+| [fakao-tracker](https://github.com/1438388098-glitch/fakao-tracker) | 法考备考进度追踪 |
+| [level-design-master](https://github.com/1438388098-glitch/level-design-master) | 2D/银河城关卡设计 AI Skill |
+| [auto-iterate-project](https://github.com/1438388098-glitch/auto-iterate-project) | 项目自动迭代工作流实验 |
 | [playlist-analysis](https://github.com/1438388098-glitch/playlist-analysis) | 歌单数据分析与可视化 |
-| [zhcrypt](https://github.com/1438388098-glitch/zhcrypt) | 中文文本加解密与编码实验 |
-| [maze-game](https://github.com/1438388098-glitch/maze-game) | 零依赖 2D 迷宫小游戏 |
+| [zhcrypt](https://github.com/1438388098-glitch/zhcrypt) · [maze-game](https://github.com/1438388098-glitch/maze-game) | 编码实验 · 零依赖迷宫游戏 |
 
 ---
 
@@ -129,7 +157,7 @@ AI 应用     Prompt / CoT 工程 · Multi-Agent 编排 · Agent Skills · RAG �
 
 ## 正在探索
 
-- 更扎实的 **法条 / 判例 RAG**（引用溯源、版本对齐、拒答策略）
+- 在 [legal-wisdom-app](https://github.com/1438388098-glitch/legal-wisdom-app) 的 FTS5 检索底座上，升级更扎实的 **法条 / 判例 RAG**（引用溯源、版本对齐、拒答策略）
 - Agent 在**合规审查、合同要点抽取**场景的可落地产出
 - 把个人 Skill 写成可复用、可评测的小产品，而不只是本地脚本
 
