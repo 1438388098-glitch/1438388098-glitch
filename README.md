@@ -159,7 +159,7 @@ AI 应用     Prompt / CoT 工程 · Multi-Agent 编排 · Agent Skills · 检�
 
 ## 正在探索
 
-- 在 [legal-wisdom-app](https://github.com/1438388098-glitch/legal-wisdom-app) 的 FTS5 检索底座上，升级更扎实的 **法条 / 判例 RAG**（引用溯源、版本对齐、拒答策略）
+- [statute-rag](https://github.com/1438388098-glitch/statute-rag)：在 [legal-wisdom-app](https://github.com/1438388098-glitch/legal-wisdom-app) 的 FTS5 检索底座之上，升级为**带可复现评测**的法条混合检索（引用溯源、混合召回；当前词法版 Recall@5 98.9%，语义向量通道在路线图）
 - Agent 在**合规审查、合同要点抽取**场景的可落地产出
 - 把个人 Skill 写成可复用、可评测的小产品，而不只是本地脚本
 
