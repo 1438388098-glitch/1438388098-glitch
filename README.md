@@ -2,10 +2,12 @@
 
 # Stoic
 
-**法律 × 技术 · AI 应用实践探索**
+**法律场景 LLM 应用实践｜可复核 · 可评估 · 懂边界**
 
 用 Agent / LLM 把法律领域里「重规则、重文本、重复核」的流程做成可运行的工具  
 在跑产品 · 在写 Skill · 在踩坑并记录边界
+
+`法律科技` · `LLM 应用工程` · `检索增强 / 评测` · `人机复核`
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?logo=javascript&logoColor=black)
@@ -64,19 +66,6 @@
 <tr>
 <td width="50%" valign="top">
 
-### 🔍 [legal-wisdom-app](https://github.com/1438388098-glitch/legal-wisdom-app)
-**法律智库 · 263 部法条检索 + AI 问答**
-
-法条全文检索增强的法律问答桌面应用：
-- SQLite FTS5 全文检索 + 关键词高亮
-- 阅读时「结合当前法条」向模型提问
-- 法条关联推荐与一键跳转
-
-`RAG 思路` · `FTS5` · `PySide6` · `LLM API`
-
-</td>
-<td width="50%" valign="top">
-
 ### 🌐 [pdf-legal-zh-translator](https://github.com/1438388098-glitch/pdf-legal-zh-translator)
 **政治/法律长文 PDF 英→中专业翻译 Skill**
 
@@ -89,30 +78,45 @@
 `Long-doc LLM` · `Glossary Sync` · `Quality Gate`
 
 </td>
+<td width="50%" valign="top">
+
+### 🔍 [legal-wisdom-app](https://github.com/1438388098-glitch/legal-wisdom-app)
+**法律智库 · 263 部法条检索 + AI 问答**
+
+法条全文检索增强的法律问答桌面应用：
+- SQLite FTS5 全文检索 + 关键词高亮
+- 阅读时「结合当前法条」向模型提问
+- 法条关联推荐与一键跳转
+
+`FTS5 检索增强` · `PySide6` · `LLM API`
+
+</td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### 🧠 [JurisCoT](https://github.com/1438388098-glitch/JurisCoT)
-**法学思维链（CoT）推理引擎**
+### 🔁 [auto-iterate-project](https://github.com/1438388098-glitch/auto-iterate-project)
+**项目自动迭代工作流（Agent 工程方法论）**
 
-按论文类型结构化生成推理链与学术段落：
-- 理论辨析 / 案例分析 / 制度比较 / 实证 / 立法建议 / 综述
-- 输入法律问题 + 法条/案例/域外法 → 输出可验收 CoT
+让 Agent 长时间无人值守改造仓库的工程化尝试：
+- 待办池按价值/风险排序，每轮实现即验证
+- 确定性校验门禁 + LLM 提案分离，拒绝假绿灯
+- 方向预测带证据校验，失败假设不回流污染统计
 
-`Chain-of-Thought` · `Legal NLP` · `Python Package`
+`Agent Workflow` · `Deterministic Gate` · `Methodology`
 
 </td>
 <td width="50%" valign="top">
 
-### 📊 [stock-db](https://github.com/1438388098-glitch/stock-db) · [qq-sentiment-monitor](https://github.com/1438388098-glitch/qq-sentiment-monitor)
-**数据思维：量化中台 + 情绪 Pipeline**
+### 📊 数据工程实践（私有仓库）
 
-不只是调 API，也做可调度的数据系统：
-- stock-db：千万级日线中台 → 双信号链 → 生产选股与门禁
-- qq-sentiment-monitor：采集 → 分析 → Fear & Greed 日报看板
+量化数据中台与社群情绪 Pipeline，两套可调度的数据系统：
+- 千万级日线中台：采集 → 调度 → 质量门禁 → 信号产出
+- 情绪监控：消息采集 → 打标分析 → 每日指数看板
 
-`Data Pipeline` · `Quant` · `Sentiment` · `Dashboard`
+因涉及实盘策略与运行细节保持私有，**架构与工程取舍欢迎面谈**。
+
+`Data Pipeline` · `Scheduling` · `Quality Gate`
 
 </td>
 </tr>
@@ -122,11 +126,9 @@
 
 | 仓库 | 说明 |
 |------|------|
-| [fakao-tracker](https://github.com/1438388098-glitch/fakao-tracker) | 法考备考进度追踪 |
-| [level-design-master](https://github.com/1438388098-glitch/level-design-master) | 2D/银河城关卡设计 AI Skill |
-| [auto-iterate-project](https://github.com/1438388098-glitch/auto-iterate-project) | 项目自动迭代工作流实验 |
-| [playlist-analysis](https://github.com/1438388098-glitch/playlist-analysis) | 歌单数据分析与可视化 |
-| [zhcrypt](https://github.com/1438388098-glitch/zhcrypt) · [maze-game](https://github.com/1438388098-glitch/maze-game) | 编码实验 · 零依赖迷宫游戏 |
+| [level-design-master](https://github.com/1438388098-glitch/level-design-master) | 2D/银河城关卡设计 AI Skill（确定性校验门禁） |
+
+其余小工具与实验项目已归档为私有。
 
 ---
 
@@ -134,7 +136,7 @@
 
 ```text
 领域        法律实务流程理解 · 法考评分标准 · 法条/司法解释结构
-AI 应用     Prompt / CoT 工程 · Multi-Agent 编排 · Agent Skills · RAG 检索增强
+AI 应用     Prompt / CoT 工程 · Multi-Agent 编排 · Agent Skills · 检索增强（FTS5 底座，Hybrid RAG 演进中）
 工程        Python · JavaScript/Node · SQLite/FTS5 · Playwright · PDF 管线
 数据        采集与清洗 · 指标定义 · 调度与门禁 · 可复现流水线
 产品习惯    从真实场景倒推能力边界 · 先锁验收再扩功能 · 文档与防呆写进仓库
