@@ -160,7 +160,8 @@ AI 应用     Prompt / CoT 工程 · Multi-Agent 编排 · Agent Skills · 检�
 ## 正在探索
 
 - [statute-rag](https://github.com/1438388098-glitch/statute-rag)：在 [legal-wisdom-app](https://github.com/1438388098-glitch/legal-wisdom-app) 的 FTS5 检索底座之上，升级为**带可复现评测**的法条混合检索（引用溯源、混合召回；当前词法版 Recall@5 98.9%，语义向量通道在路线图）
-- Agent 在**合规审查、合同要点抽取**场景的可落地产出
+- [clause-scope](https://github.com/1438388098-glitch/clause-scope)：合同条款抽取与风险提示——确定性规则引擎，条款分类 + span 回跳 + 三级风险发现（缺失/失衡/含糊）
+- [legal-hallu-guard](https://github.com/1438388098-glitch/legal-hallu-guard)：法律答案引用护栏——引用存在性/引文保真/断言覆盖三类确定性校验，错误引用率可测量
 - 把个人 Skill 写成可复用、可评测的小产品，而不只是本地脚本
 
 ---
