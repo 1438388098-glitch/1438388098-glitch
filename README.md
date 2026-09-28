@@ -85,7 +85,7 @@ I take pain points that genuinely exist in legal practice and turn them into eng
 **Hybrid retrieval base for statutes — with honest eval numbers**
 
 - Structured chunking → LIKE / BM25 / RRF fusion → forced article-level citations
-- Honest eval, both numbers shown: synthetic gold **Recall@5 98.9%**, first real-question gold (38 real user questions, sources logged) **26.3%** — [gap analyzed, not hidden](https://github.com/1438388098-glitch/statute-rag/blob/main/docs/real-question-eval.md)
+- Honest eval, both numbers shown: synthetic gold **Recall@5 98.9%**; real-question gold (38 real user questions, sources logged) **26.3% → 44.7%** via a legal colloquialism↔statute-phrase lexicon + query expansion — [every step and leftover failures documented](https://github.com/1438388098-glitch/statute-rag/blob/main/docs/retrieval-improvement.md)
 - Semantic-vector channel on the roadmap, behind the same eval harness
 
 `Hybrid RAG` · `Citation Grounding` · `Offline Eval`
@@ -110,7 +110,7 @@ I take pain points that genuinely exist in legal practice and turn them into eng
 ### 📖 [legal-wisdom-app](https://github.com/1438388098-glitch/legal-wisdom-app)
 **Local statute library with retrieval-augmented Q&A**
 
-- Full texts of 260+ Chinese laws and regulations, SQLite FTS5 search with highlighting
+- Full texts of 257 Chinese laws and regulations (core codes pending; the database rebuilds from public sources via docs/repro.md), SQLite FTS5 search with highlighting
 - Ask the model "in light of the current article" while reading
 - Related-article suggestions with one-click jump
 
@@ -165,7 +165,7 @@ These four rules are what I actually enforce in code — and the part of my work
 
 - Final-year LL.B. coursework & preparing for the essay round of the National Legal Professional Qualification Exam (法考)
 - Growing [cn-judbench](https://github.com/1438388098-glitch/cn-judbench): more task packs, a reproducible leaderboard; technical report v1 is out
-- Closing the real-question retrieval gap in [statute-rag](https://github.com/1438388098-glitch/statute-rag): 26.3% Recall@5 on real user questions, collocations↔legal-language mapping under way
+- [statute-rag](https://github.com/1438388098-glitch/statute-rag): pushing real-question retrieval further (26.3% → 44.7% Recall@5 done); next is the semantic-vector channel
 
 ## Contact
 

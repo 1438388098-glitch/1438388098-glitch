@@ -88,7 +88,7 @@
 **法条混合检索底座——评测数字可复现**
 
 - 结构化分块 → LIKE/BM25/RRF 混合召回 → 强制条文级引用
-- 评测数字两套并列、不藏短：合成金标 **Recall@5 98.9%**；首轮真实问句金标（38 条真实用户提问，来源全记录）**26.3%**——[差距逐条分析](https://github.com/1438388098-glitch/statute-rag/blob/main/docs/real-question-eval.md)
+- 评测数字两套并列、不藏短：合成金标 **Recall@5 98.9%**；真实问句金标（38 条真实用户提问，来源全记录）**26.3% → 44.7%**（法律口语↔法言法语同义词典 + 查询扩展）——[每一步机制与剩余失败案例全记录](https://github.com/1438388098-glitch/statute-rag/blob/main/docs/retrieval-improvement.md)
 - 语义向量通道在路线图上，走同一套评测门禁
 
 `Hybrid RAG` · `引用溯源` · `离线评测`
@@ -186,7 +186,7 @@ AI 应用     Prompt / CoT 工程 · Multi-Agent 编排 · Agent Skills · 检�
 
 - 法考主观题冲刺 + 大四课业
 - [cn-judbench](https://github.com/1438388098-glitch/cn-judbench)：扩充任务包、公开可复现榜单；技术报告 v1 已随 [v0.6.0](https://github.com/1438388098-glitch/cn-judbench/releases/tag/v0.6.0) 发布
-- [statute-rag](https://github.com/1438388098-glitch/statute-rag)：攻真实问句检索差距（26.3% Recall@5），口语↔法言法语映射进行中
+- [statute-rag](https://github.com/1438388098-glitch/statute-rag)：真实问句检索继续推进（已 26.3% → 44.7%），下一站语义向量通道
 
 ---
 
