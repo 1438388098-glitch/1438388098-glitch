@@ -1,19 +1,21 @@
 <div align="center">
 
+**English** | [简体中文](./README.zh-CN.md)
+
 # Stoic
 
-**法律场景 LLM 应用实践｜可复核 · 可评估 · 懂边界**
+**LL.B. candidate @ Zhongnan University of Economics and Law × self-taught engineer**
 
-用 Agent / LLM 把法律领域里「重规则、重文本、重复核」的流程做成可运行的工具  
-在跑产品 · 在写 Skill · 在踩坑并记录边界
+I build tools for the parts of law that software is actually good at — **rules, texts, verification** —  
+and stay candid about the parts it cannot do — **judgment, accountability, the last mile of trust**.
 
-`法律科技` · `LLM 应用工程` · `检索增强 / 评测` · `人机复核`
+`Legal Tech` · `LLM Application Engineering` · `Retrieval / Evaluation` · `Human-in-the-loop`
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?logo=javascript&logoColor=black)
-![LLM](https://img.shields.io/badge/LLM-DeepSeek%20%7C%20OpenAI%20%7C%20Zhipu-8A2BE2)
 ![Agent](https://img.shields.io/badge/Agent-Multi--Agent%20%7C%20Skill-FF6B35)
 ![Legal Tech](https://img.shields.io/badge/Domain-Legal%20Tech-1B4F72)
+![LL.B.](https://img.shields.io/badge/LL.B.-ZUEL%2C%20final%20year-8B0000)
 
 [![GitHub followers](https://img.shields.io/github/followers/1438388098-glitch?style=social)](https://github.com/1438388098-glitch)
 
@@ -21,45 +23,71 @@
 
 ---
 
-## 我在做什么
+## What I work on
 
-把法律实务里真实存在的痛点，拆成「数据 → 结构化约束 → LLM/Agent → 人工复核」的工程问题：
+I take pain points that genuinely exist in legal practice and turn them into engineering problems of the form
+**data → structured constraints → LLM / Agent → human review**:
 
-- **不是让模型自由发挥**，而是先把官方采分点、术语表、法条原文变成可校验的中间结构
-- **不是单点 prompt**，而是多 subagent 并行审查 + 硬校验门禁，宁可报错也不产出假绿灯
-- **不假装模型无所不能**——每个项目都写清适用边界与人工兜底位
+- **Not free-form generation.** Official scoring rubrics, glossaries and statute texts are structured *first*; the model then checks, fills or drafts against them.
+- **Not a single prompt.** Multi-subagent review loops plus hard verification gates — the pipeline would rather fail loudly than ship a fake green light.
+- **Not pretending the model is omnipotent.** Every project documents its applicable boundary and the exact spot where a human takes over.
 
 ---
 
-## 精选项目
+## Featured work
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### ⚖️ [fakao-grader](https://github.com/1438388098-glitch/fakao-grader)
-**法考主观题 AI 评卷老师（Agent Skill）**
+### 🏛️ [cn-judbench](https://github.com/1438388098-glitch/cn-judbench)
+**CN-JudBench (法衡) — an open benchmark for LLMs on Chinese judicial tasks**
 
-按官方采分点逐点判分，不是印象分：
-- 采分点三类标注（结论 / 依据 / 分析）
-- 连锁丢分依赖链可视化
-- 双分数：训练口径 + 考场预估带
-- 判分稳定性：校准样例 + 置信度 + 中置信二次复核
+- 12 task packs, 323 items, versioned and growing
+- Machine-checked scoring, not LLM-as-judge vibes
+- Pre-registered statistical protocol before each release
+- Code MIT · public data CC BY 4.0
 
-`Agent` · `Legal EdTech` · `Scoring Rubric`
+`Benchmark` · `Evaluation` · `Reproducibility`
 
 </td>
 <td width="50%" valign="top">
 
-### 📚 [zhuma-fakao-review](https://github.com/1438388098-glitch/zhuma-fakao-review)
-**法考错题 → 可背诵知识笔记 PDF**
+### ⚖️ [fakao-grader](https://github.com/1438388098-glitch/fakao-grader)
+**AI grader for the essay round of China's legal professional exam (Agent Skill)**
 
-全量错题抓取后，按知识点合并去重，生成分册 PDF：
-- 多 subagent「科目 × 维度」六维审查闭环
-- P0 必须修订并复审，解析失败直接报错
-- 原子落盘 / 进程锁 / 登录态只留本地
+- Point-by-point scoring against the official rubric — not an impression score
+- Scoring points tagged by type (conclusion / basis / analysis), with lost-point dependency chains
+- Dual output: training score + exam-day estimate band
+- Stability: calibration samples, confidence levels, second-pass review at medium confidence
+
+`Agent` · `Legal EdTech` · `Scoring Rubric`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 📚 [zhuma-fakao-review](https://github.com/1438388098-glitch/zhuma-fakao-review)
+**Wrong-answer book → memorizable study notes (PDF)**
+
+- Full scrape of my exam-app wrong answers, merged and deduped by knowledge point
+- Six-dimension multi-subagent review loop; P0 findings must be fixed and re-reviewed
+- Atomic writes / process locks / login state stays local
 
 `Multi-Agent` · `Playwright` · `PDF Pipeline`
+
+</td>
+<td width="50%" valign="top">
+
+### 🔍 [statute-rag](https://github.com/1438388098-glitch/statute-rag)
+**Hybrid retrieval base for statutes — with honest eval numbers**
+
+- Structured chunking → LIKE / BM25 / RRF fusion → forced article-level citations
+- Offline evaluation fully reproducible: **Recall@5 98.9% vs 77.4% lexical baseline**
+- Semantic-vector channel on the roadmap, behind the same eval harness
+
+`Hybrid RAG` · `Citation Grounding` · `Offline Eval`
 
 </td>
 </tr>
@@ -67,112 +95,68 @@
 <td width="50%" valign="top">
 
 ### 🌐 [pdf-legal-zh-translator](https://github.com/1438388098-glitch/pdf-legal-zh-translator)
-**政治/法律长文 PDF 英→中专业翻译 Skill**
+**EN→ZH translation skill for long legal & policy PDFs**
 
-面向数百页条约、判决、政策文件：
-- 按章节分块并行翻译 + 跨块上下文
-- 共享术语表唯一真源，并发合并无竞态
-- 法条引用保真（`§ 1983`、判例名原样保留）
-- 页覆盖硬校验 + 多 agent 质量审查
+- Built for treaty / judgment / policy documents running to hundreds of pages
+- Chunked parallel translation with cross-chunk context; single-source shared glossary, race-free merging
+- Citation fidelity (`§ 1983`, case names preserved) + page-coverage hard checks + multi-agent QA
 
 `Long-doc LLM` · `Glossary Sync` · `Quality Gate`
 
 </td>
 <td width="50%" valign="top">
 
-### 🔍 [legal-wisdom-app](https://github.com/1438388098-glitch/legal-wisdom-app)
-**法律智库 · 250+ 部法条检索 + AI 问答**
+### 📖 [legal-wisdom-app](https://github.com/1438388098-glitch/legal-wisdom-app)
+**Local statute library with retrieval-augmented Q&A**
 
-法条全文检索增强的法律问答桌面应用：
-- SQLite FTS5 全文检索 + 关键词高亮
-- 阅读时「结合当前法条」向模型提问
-- 法条关联推荐与一键跳转
+- Full texts of 260+ Chinese laws and regulations, SQLite FTS5 search with highlighting
+- Ask the model "in light of the current article" while reading
+- Related-article suggestions with one-click jump
 
-`FTS5 检索增强` · `PySide6` · `LLM API`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🔁 [auto-iterate-project](https://github.com/1438388098-glitch/auto-iterate-project)
-**项目自动迭代工作流（Agent 工程方法论）**
-
-让 Agent 长时间无人值守改造仓库的工程化尝试：
-- 待办池按价值/风险排序，每轮实现即验证
-- 确定性校验门禁 + LLM 提案分离，拒绝假绿灯
-- 方向预测带证据校验，失败假设不回流污染统计
-
-`Agent Workflow` · `Deterministic Gate` · `Methodology`
-
-</td>
-<td width="50%" valign="top">
-
-### 📊 数据工程实践（私有仓库）
-
-量化数据中台与社群情绪 Pipeline，两套可调度的数据系统：
-- 千万级日线中台：采集 → 调度 → 质量门禁 → 信号产出
-- 情绪监控：消息采集 → 打标分析 → 每日指数看板
-
-因涉及实盘策略与运行细节保持私有，**架构与工程取舍欢迎面谈**。
-
-`Data Pipeline` · `Scheduling` · `Quality Gate`
+`FTS5 RAG` · `PySide6` · `LLM API`
 
 </td>
 </tr>
 </table>
 
-### 更多
+### More
 
-| 仓库 | 说明 |
-|------|------|
-| [level-design-master](https://github.com/1438388098-glitch/level-design-master) | 2D/银河城关卡设计 AI Skill（确定性校验门禁） |
+| Repo | What it does |
+|------|--------------|
+| [clause-scope](https://github.com/1438388098-glitch/clause-scope) | Contract clause extraction & risk flags — deterministic rule engine, span-level evidence, three tiers of findings (missing / unbalanced / vague) |
+| [legal-hallu-guard](https://github.com/1438388098-glitch/legal-hallu-guard) | Citation guardrails for legal answers — existence, quotation fidelity, assertion coverage; the wrong-citation rate is *measured*, not assumed |
+| [fakao-shuati](https://github.com/1438388098-glitch/fakao-shuati) | Self-hosted essay-exam practice platform — AI grading against scoring points, deep review reports, kanban & error book, zero native deps |
+| [legal-job-tracker](https://github.com/1438388098-glitch/legal-job-tracker) | Legal-hiring information platform — 33 official sources, dedup, résumé matching, application tracking; runs locally, data never leaves the machine |
+| [level-design-master](https://github.com/1438388098-glitch/level-design-master) | AI skill for 2D / metroidvania level design, with deterministic verification gates |
 
-其余小工具与实验项目已归档为私有。
-
----
-
-## 能力栈
-
-```text
-领域        法律实务流程理解 · 法考评分标准 · 法条/司法解释结构
-AI 应用     Prompt / CoT 工程 · Multi-Agent 编排 · Agent Skills · 检索增强（FTS5 底座，Hybrid RAG 演进中）
-工程        Python · JavaScript/Node · SQLite/FTS5 · Playwright · PDF 管线
-数据        采集与清洗 · 指标定义 · 调度与门禁 · 可复现流水线
-产品习惯    从真实场景倒推能力边界 · 先锁验收再扩功能 · 文档与防呆写进仓库
-```
-
-**常用 AI 产品与接口**：Claude Code / ZCode 等 Agent CLI；DeepSeek、OpenAI、智谱、SiliconFlow 等模型 API。在真实项目里对比过成本、稳定性与可审查性，而不是只停留在会聊天。
+Also in private repos: a quant data platform (A-share market data engineering) and a community-sentiment pipeline — architecture and trade-offs available on request.
 
 ---
 
-## 我如何理解 LLM 能力边界
+## How I think about the limits of LLMs in law
 
-这是我做法律 AI 时的硬约束，也是简历里愿意被追问的部分：
+These four rules are what I actually enforce in code — and the part of my work I most welcome questions about:
 
-1. **结构先于生成**——采分点、术语表、法条原文先结构化，再交给模型对照/填空，而不是端到端黑盒打分
-2. **可校验优于好听**——页覆盖、分值合计、术语回填用脚本硬校验；宁可 pipeline 失败，也不输出「看起来很完整」的假结果
-3. **人审不可省**——模型产出定位为「初稿 / 辅助判分 / 检索摘要」，最终解释权仍在官方规则与人类专家
-4. **幻觉要可追责**——引用保留原文锚点，中低置信强制复核，禁止静默吞掉异常
-
----
-
-## 正在探索
-
-- [statute-rag](https://github.com/1438388098-glitch/statute-rag)：在 [legal-wisdom-app](https://github.com/1438388098-glitch/legal-wisdom-app) 的 FTS5 检索底座之上，升级为**带可复现评测**的法条混合检索（引用溯源、混合召回；当前词法版 Recall@5 98.9%，语义向量通道在路线图）
-- [clause-scope](https://github.com/1438388098-glitch/clause-scope)：合同条款抽取与风险提示——确定性规则引擎，条款分类 + span 回跳 + 三级风险发现（缺失/失衡/含糊）
-- [legal-hallu-guard](https://github.com/1438388098-glitch/legal-hallu-guard)：法律答案引用护栏——引用存在性/引文保真/断言覆盖三类确定性校验，错误引用率可测量
-- 把个人 Skill 写成可复用、可评测的小产品，而不只是本地脚本
+1. **Structure before generation.** Scoring points, glossaries and statute texts are structured first; the model compares, fills and drafts against them — it does not score end-to-end like a black box.
+2. **Verifiable beats fluent.** Page coverage, score totals and term backfill are checked by scripts. I would rather the pipeline crash than output something that merely *looks* complete.
+3. **Human review is not optional.** Model output is positioned as first draft / assisted scoring / retrieval summary; final authority stays with official rules and human experts.
+4. **Hallucination must be traceable.** Citations keep anchors to the original text; medium/low confidence triggers forced re-review; anomalies are never silently swallowed.
 
 ---
 
-## 联系与说明
+## Now
 
-- 欢迎法律科技 / 法务科技 / AI 应用方向的交流与内推
-- 涉及考试、法条、数据的场景均以官方渠道与人工判断为准；AI 产出为辅助，不构成法律意见或官方评分
+- Final-year LL.B. coursework & preparing for the essay round of the National Legal Professional Qualification Exam (法考)
+- Applying for **LL.M. programmes in Hong Kong (2027 intake)** — drawn to AI-law and technology-law directions
+- Growing [cn-judbench](https://github.com/1438388098-glitch/cn-judbench): more task packs, a reproducible leaderboard, a first technical report
+
+## Contact
+
+- Open to conversations about legal tech, computational law and LLM evaluation — research collaboration especially welcome
+- Wherever exams, statutes or data are involved, official channels and human judgment prevail; AI output here is assistance only — not legal advice, not official scoring
 
 <div align="center">
 
-*「先想清楚模型哪里不行，再决定哪里让它行。」*
+*"First be clear about where the model fails — then decide where to let it help."*
 
 </div>
