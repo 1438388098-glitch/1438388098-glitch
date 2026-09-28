@@ -46,6 +46,7 @@ I take pain points that genuinely exist in legal practice and turn them into eng
 - 12 task packs, 323 items, versioned and growing
 - Machine-checked scoring, not LLM-as-judge vibes
 - Pre-registered statistical protocol before each release
+- First technical report released ([v0.6.0](https://github.com/1438388098-glitch/cn-judbench/releases/tag/v0.6.0))
 - Code MIT · public data CC BY 4.0
 
 `Benchmark` · `Evaluation` · `Reproducibility`
@@ -84,7 +85,7 @@ I take pain points that genuinely exist in legal practice and turn them into eng
 **Hybrid retrieval base for statutes — with honest eval numbers**
 
 - Structured chunking → LIKE / BM25 / RRF fusion → forced article-level citations
-- Offline evaluation fully reproducible: **Recall@5 98.9% vs 77.4% lexical baseline**
+- Honest eval, both numbers shown: synthetic gold **Recall@5 98.9%**, first real-question gold (38 real user questions, sources logged) **26.3%** — [gap analyzed, not hidden](https://github.com/1438388098-glitch/statute-rag/blob/main/docs/real-question-eval.md)
 - Semantic-vector channel on the roadmap, behind the same eval harness
 
 `Hybrid RAG` · `Citation Grounding` · `Offline Eval`
@@ -124,7 +125,7 @@ I take pain points that genuinely exist in legal practice and turn them into eng
 | Repo | What it does |
 |------|--------------|
 | [clause-scope](https://github.com/1438388098-glitch/clause-scope) | Contract clause extraction & risk flags — deterministic rule engine, span-level evidence, three tiers of findings (missing / unbalanced / vague) |
-| [legal-hallu-guard](https://github.com/1438388098-glitch/legal-hallu-guard) | Citation guardrails for legal answers — existence, quotation fidelity, assertion coverage; the wrong-citation rate is *measured*, not assumed |
+| [legal-hallu-guard](https://github.com/1438388098-glitch/legal-hallu-guard) | Citation guardrails for legal answers — existence, quotation fidelity, assertion coverage; on a 14k-article real corpus: 0% false positives, 100% detection of fabricated / misquoted / uncited citations (constructed baseline) |
 | [fakao-shuati](https://github.com/1438388098-glitch/fakao-shuati) | Self-hosted essay-exam practice platform — AI grading against scoring points, deep review reports, kanban & error book, zero native deps |
 | [legal-job-tracker](https://github.com/1438388098-glitch/legal-job-tracker) | Legal-hiring information platform — 33 official sources, dedup, résumé matching, application tracking; runs locally, data never leaves the machine |
 | [level-design-master](https://github.com/1438388098-glitch/level-design-master) | AI skill for 2D / metroidvania level design, with deterministic verification gates |
@@ -147,7 +148,8 @@ These four rules are what I actually enforce in code — and the part of my work
 ## Now
 
 - Final-year LL.B. coursework & preparing for the essay round of the National Legal Professional Qualification Exam (法考)
-- Growing [cn-judbench](https://github.com/1438388098-glitch/cn-judbench): more task packs, a reproducible leaderboard, a first technical report
+- Growing [cn-judbench](https://github.com/1438388098-glitch/cn-judbench): more task packs, a reproducible leaderboard; technical report v1 is out
+- Closing the real-question retrieval gap in [statute-rag](https://github.com/1438388098-glitch/statute-rag): 26.3% Recall@5 on real user questions, collocations↔legal-language mapping under way
 
 ## Contact
 

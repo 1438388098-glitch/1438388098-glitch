@@ -48,6 +48,7 @@
 - 机检判分，不做「LLM 当裁判」的印象分
 - 每次发布前执行预注册统计协议，结果可复现
 - 代码 MIT · 公开数据 CC BY 4.0
+- 技术报告 v1 已随 [v0.6.0](https://github.com/1438388098-glitch/cn-judbench/releases/tag/v0.6.0) 发布
 
 `Benchmark` · `评测` · `可复现性`
 
@@ -87,7 +88,7 @@
 **法条混合检索底座——评测数字可复现**
 
 - 结构化分块 → LIKE/BM25/RRF 混合召回 → 强制条文级引用
-- 离线评测全流程可复现：**Recall@5 98.9% vs 基线 77.4%**
+- 评测数字两套并列、不藏短：合成金标 **Recall@5 98.9%**；首轮真实问句金标（38 条真实用户提问，来源全记录）**26.3%**——[差距逐条分析](https://github.com/1438388098-glitch/statute-rag/blob/main/docs/real-question-eval.md)
 - 语义向量通道在路线图上，走同一套评测门禁
 
 `Hybrid RAG` · `引用溯源` · `离线评测`
@@ -130,7 +131,7 @@
 | 仓库 | 说明 |
 |------|------|
 | [clause-scope](https://github.com/1438388098-glitch/clause-scope) | 合同条款抽取与风险提示——确定性规则引擎，条款分类 + span 回跳 + 三级风险发现（缺失/失衡/含糊） |
-| [legal-hallu-guard](https://github.com/1438388098-glitch/legal-hallu-guard) | 法律答案引用护栏——引用存在性 / 引文保真 / 断言覆盖三类确定性校验，错误引用率可测量 |
+| [legal-hallu-guard](https://github.com/1438388098-glitch/legal-hallu-guard) | 法律答案引用护栏——引用存在性 / 引文保真 / 断言覆盖三类确定性校验；14,212 条真实语料基线：误报 0%、三类错误引用检出均 100%（构造评测） |
 | [fakao-shuati](https://github.com/1438388098-glitch/fakao-shuati) | 法考主观题自托管刷题平台——AI 按采分点批改、深度复盘报告、看板/错题本/背诵，零原生依赖 |
 | [legal-job-tracker](https://github.com/1438388098-glitch/legal-job-tracker) | 法学招聘信息中台——33 个官方源自动采集、去重、简历匹配推荐、投递跟踪，单机运行数据不出本机 |
 | [auto-iterate-project](https://github.com/1438388098-glitch/auto-iterate-project) | 项目自动迭代工作流——待办按价值/风险排序，确定性校验门禁 + LLM 提案分离 |
@@ -168,7 +169,8 @@ AI 应用     Prompt / CoT 工程 · Multi-Agent 编排 · Agent Skills · 检�
 ## 正在做
 
 - 法考主观题冲刺 + 大四课业
-- [cn-judbench](https://github.com/1438388098-glitch/cn-judbench)：扩充任务包、公开可复现榜单、第一版技术报告
+- [cn-judbench](https://github.com/1438388098-glitch/cn-judbench)：扩充任务包、公开可复现榜单；技术报告 v1 已随 [v0.6.0](https://github.com/1438388098-glitch/cn-judbench/releases/tag/v0.6.0) 发布
+- [statute-rag](https://github.com/1438388098-glitch/statute-rag)：攻真实问句检索差距（26.3% Recall@5），口语↔法言法语映射进行中
 
 ---
 
