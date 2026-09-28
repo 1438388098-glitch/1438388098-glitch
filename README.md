@@ -130,6 +130,22 @@ I take pain points that genuinely exist in legal practice and turn them into eng
 | [legal-job-tracker](https://github.com/1438388098-glitch/legal-job-tracker) | Legal-hiring information platform — 33 official sources, dedup, résumé matching, application tracking; runs locally, data never leaves the machine |
 | [level-design-master](https://github.com/1438388098-glitch/level-design-master) | AI skill for 2D / metroidvania level design, with deterministic verification gates |
 
+<details>
+<summary><strong>More public repos — engineering & life side</strong></summary>
+
+| Repo | What it does |
+|------|--------------|
+| [JurisCoT](https://github.com/1438388098-glitch/JurisCoT) | Chain-of-thought prompt templates + CLI for legal thesis writing (6 thesis types, link-checked reasoning chains) |
+| [zhcrypt](https://github.com/1438388098-glitch/zhcrypt) | Threshold secret-sharing & cryptography toolkit (Shamir et al.) |
+| [fakao-tracker](https://github.com/1438388098-glitch/fakao-tracker) | Study tracker for the legal professional qualification exam — task calendar, check-ins, stats (data stays local) |
+| [maze-game](https://github.com/1438388098-glitch/maze-game) | Gamified maze generation & pathfinding with a quantitative evaluation harness |
+| [CS2D](https://github.com/1438388098-glitch/CS2D) | From-scratch 2D top-down shooter — 16 ADR-documented iterations, evolved AI bot ladder |
+| [headphone-logger](https://github.com/1438388098-glitch/headphone-logger) | Windows headphone connect/disconnect event logger (.NET 10, 62 unit tests) |
+| [playlist-analysis](https://github.com/1438388098-glitch/playlist-analysis) · [bilibili-progress-tracker](https://github.com/1438388098-glitch/bilibili-progress-tracker) | Multi-platform playlist analyzer · Bilibili course-progress extension |
+| [poetry-site](https://github.com/1438388098-glitch/poetry-site) · [personal-website](https://github.com/1438388098-glitch/personal-website) | Personal poetry site since 2021 (plain PHP) · personal homepage |
+
+</details>
+
 Also in private repos: a quant data platform (A-share market data engineering) and a community-sentiment pipeline — architecture and trade-offs available on request.
 
 ---

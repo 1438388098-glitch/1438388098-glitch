@@ -137,6 +137,22 @@
 | [auto-iterate-project](https://github.com/1438388098-glitch/auto-iterate-project) | 项目自动迭代工作流——待办按价值/风险排序，确定性校验门禁 + LLM 提案分离 |
 | [level-design-master](https://github.com/1438388098-glitch/level-design-master) | 2D / 银河城关卡设计 AI Skill（确定性校验门禁） |
 
+<details>
+<summary><strong>更多公开项目——工程与生活侧</strong></summary>
+
+| 仓库 | 一句话 |
+|------|--------|
+| [JurisCoT](https://github.com/1438388098-glitch/JurisCoT) | 法律论文 CoT 提示模板 + 链路核对 CLI（6 类论文模板） |
+| [zhcrypt](https://github.com/1438388098-glitch/zhcrypt) | 门限秘密分享与加密工具集（Shamir 等） |
+| [fakao-tracker](https://github.com/1438388098-glitch/fakao-tracker) | 法考备考追踪：任务日历、打卡与统计（数据本地自备） |
+| [maze-game](https://github.com/1438388098-glitch/maze-game) | 迷宫生成与寻路算法的游戏化实现（量化指标评测） |
+| [CS2D](https://github.com/1438388098-glitch/CS2D) | 自研 2D 俯视角射击游戏：16 轮 ADR 迭代 + 进化 AI 对战 |
+| [headphone-logger](https://github.com/1438388098-glitch/headphone-logger) | Windows 耳机连接事件日志（.NET 10，62 项单测） |
+| [playlist-analysis](https://github.com/1438388098-glitch/playlist-analysis) · [bilibili-progress-tracker](https://github.com/1438388098-glitch/bilibili-progress-tracker) | 多平台歌单分析 · B 站网课进度扩展 |
+| [poetry-site](https://github.com/1438388098-glitch/poetry-site) · [personal-website](https://github.com/1438388098-glitch/personal-website) | 个人诗集站（2021 至今，纯 PHP）· 个人主页 |
+
+</details>
+
 私有仓库中另有量化数据中台与社群情绪 Pipeline 两套数据系统，**架构与工程取舍欢迎交流**。
 
 ---
