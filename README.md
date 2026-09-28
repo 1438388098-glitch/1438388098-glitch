@@ -147,7 +147,6 @@ These four rules are what I actually enforce in code — and the part of my work
 ## Now
 
 - Final-year LL.B. coursework & preparing for the essay round of the National Legal Professional Qualification Exam (法考)
-- Applying for **LL.M. programmes in Hong Kong (2027 intake)** — drawn to AI-law and technology-law directions
 - Growing [cn-judbench](https://github.com/1438388098-glitch/cn-judbench): more task packs, a reproducible leaderboard, a first technical report
 
 ## Contact
