@@ -6,8 +6,7 @@
 
 **LL.B. candidate @ Zhongnan University of Economics and Law × self-taught engineer**
 
-I build tools for the parts of law that software is actually good at — **rules, texts, verification** —  
-and stay candid about the parts it cannot do — **judgment, accountability, the last mile of trust**.
+I build tools that run the rule-heavy, text-heavy, verification-heavy parts of legal work with agents and LLMs. A few of them are products I use daily, and the pitfalls and limits I hit along the way are documented in each repo.
 
 `Legal Tech` · `LLM Application Engineering` · `Retrieval / Evaluation` · `Human-in-the-loop`
 
@@ -25,12 +24,7 @@ and stay candid about the parts it cannot do — **judgment, accountability, the
 
 ## What I work on
 
-I take pain points that genuinely exist in legal practice and turn them into engineering problems of the form
-**data → structured constraints → LLM / Agent → human review**:
-
-- **Structured inputs first.** Official scoring rubrics, glossaries and statute texts become verifiable intermediate structures; the model then checks, fills or drafts against them.
-- **Full review pipelines.** Multi-subagent review loops plus hard verification gates — the pipeline would rather fail loudly than ship a fake green light.
-- **Documented boundaries.** Every project documents its applicable scope and the exact spot where a human takes over.
+My projects usually start from a real need of my own — studying for the exam, looking for a job. The approach is consistent: I turn official scoring rubrics, glossaries and statute texts into formats a program can check, let the model work inside that structure, and have scripts plus multi-subagent cross-review verify the output. When a check fails, the pipeline fails loudly. Every project documents where it applies and where a human takes over.
 
 ---
 
@@ -73,7 +67,7 @@ I take pain points that genuinely exist in legal practice and turn them into eng
 **Wrong-answer book → memorizable study notes (PDF)**
 
 - Full scrape of my exam-app wrong answers, merged and deduped by knowledge point
-- Six-dimension multi-subagent review loop; P0 findings must be fixed and re-reviewed
+- Six-dimension multi-subagent review with severity tiers; P0 findings must be fixed and re-reviewed
 - Atomic writes / process locks / login state stays local
 
 `Multi-Agent` · `Playwright` · `PDF Pipeline`
@@ -86,7 +80,7 @@ I take pain points that genuinely exist in legal practice and turn them into eng
 
 - Structured chunking → LIKE / BM25 / RRF fusion → forced article-level citations
 - Honest eval, both numbers shown: synthetic gold **Recall@5 98.9%**; real-question gold (38 real user questions, sources logged) **26.3% → 44.7%** via a legal colloquialism↔statute-phrase lexicon + query expansion — [every step and leftover failures documented](https://github.com/1438388098-glitch/statute-rag/blob/main/docs/retrieval-improvement.md)
-- Semantic-vector channel on the roadmap, behind the same eval harness
+- A semantic-vector channel is next, to be evaluated with the same scripts
 
 `Hybrid RAG` · `Citation Grounding` · `Offline Eval`
 
@@ -150,14 +144,14 @@ Also in private repos: a quant data platform (A-share market data engineering) a
 
 ---
 
-## How I think about the limits of LLMs in law
+## Hard rules in every project
 
-These four rules are what I actually enforce in code — and the part of my work I most welcome questions about:
+These hold across everything I ship; happy to walk through the details:
 
-1. **Structure before generation.** Scoring points, glossaries and statute texts are structured first; the model compares, fills and drafts against them — scoring is computed by rules from structured evidence.
-2. **Verifiable beats fluent.** Page coverage, score totals and term backfill are checked by scripts. I would rather the pipeline crash than output something that merely *looks* complete.
-3. **Human review on every path.** Model output is positioned as first draft / assisted scoring / retrieval summary; final authority stays with official rules and human experts.
-4. **Hallucination must be traceable.** Citations keep anchors to the original text; medium/low confidence triggers forced re-review; anomalies are never silently swallowed.
+1. Scoring points, glossaries and statute texts are structured first; the model compares, fills and drafts inside that structure, and scores are computed by rules from the structured evidence.
+2. Page coverage, score totals and term backfill are checked by scripts — a failed check fails the pipeline.
+3. Model output counts as first draft, assisted scoring or a retrieval summary; final authority stays with official rules and human judgment.
+4. Citations keep anchors to the original text; medium/low confidence triggers a forced re-review, and anomalies are never silently dropped.
 
 ---
 
@@ -165,15 +159,10 @@ These four rules are what I actually enforce in code — and the part of my work
 
 - Final-year LL.B. coursework & preparing for the essay round of the National Legal Professional Qualification Exam (法考)
 - Growing [cn-judbench](https://github.com/1438388098-glitch/cn-judbench): more task packs, a reproducible leaderboard; technical report v1 is out
-- [statute-rag](https://github.com/1438388098-glitch/statute-rag): pushing real-question retrieval further (26.3% → 44.7% Recall@5 done); next is the semantic-vector channel
+- [statute-rag](https://github.com/1438388098-glitch/statute-rag): pushing real-question retrieval further (26.3% → 44.7% Recall@5 done); a semantic-vector channel is planned
 
 ## Contact
 
 - Open to conversations about legal tech, computational law and LLM evaluation — research collaboration especially welcome
 - Wherever exams, statutes or data are involved, official channels and human judgment prevail; AI output here is assistance only — not legal advice, not official scoring
 
-<div align="center">
-
-*"First be clear about where the model fails — then decide where to let it help."*
-
-</div>
