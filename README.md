@@ -28,9 +28,9 @@ and stay candid about the parts it cannot do — **judgment, accountability, the
 I take pain points that genuinely exist in legal practice and turn them into engineering problems of the form
 **data → structured constraints → LLM / Agent → human review**:
 
-- **Not free-form generation.** Official scoring rubrics, glossaries and statute texts are structured *first*; the model then checks, fills or drafts against them.
-- **Not a single prompt.** Multi-subagent review loops plus hard verification gates — the pipeline would rather fail loudly than ship a fake green light.
-- **Not pretending the model is omnipotent.** Every project documents its applicable boundary and the exact spot where a human takes over.
+- **Structured inputs first.** Official scoring rubrics, glossaries and statute texts become verifiable intermediate structures; the model then checks, fills or drafts against them.
+- **Full review pipelines.** Multi-subagent review loops plus hard verification gates — the pipeline would rather fail loudly than ship a fake green light.
+- **Documented boundaries.** Every project documents its applicable scope and the exact spot where a human takes over.
 
 ---
 
@@ -44,7 +44,7 @@ I take pain points that genuinely exist in legal practice and turn them into eng
 **CN-JudBench (法衡) — an open benchmark for LLMs on Chinese judicial tasks**
 
 - 12 task packs, 323 items, versioned and growing
-- Machine-checked scoring, not LLM-as-judge vibes
+- Machine-checked scoring at the predicate level, fully auditable
 - Pre-registered statistical protocol before each release
 - First technical report released ([v0.6.0](https://github.com/1438388098-glitch/cn-judbench/releases/tag/v0.6.0))
 - Code MIT · public data CC BY 4.0
@@ -57,7 +57,7 @@ I take pain points that genuinely exist in legal practice and turn them into eng
 ### ⚖️ [fakao-grader](https://github.com/1438388098-glitch/fakao-grader)
 **AI grader for the essay round of China's legal professional exam (Agent Skill)**
 
-- Point-by-point scoring against the official rubric — not an impression score
+- Point-by-point scoring against the official rubric, every point traceable
 - Scoring points tagged by type (conclusion / basis / analysis), with lost-point dependency chains
 - Dual output: training score + exam-day estimate band
 - Stability: calibration samples, confidence levels, second-pass review at medium confidence
@@ -154,9 +154,9 @@ Also in private repos: a quant data platform (A-share market data engineering) a
 
 These four rules are what I actually enforce in code — and the part of my work I most welcome questions about:
 
-1. **Structure before generation.** Scoring points, glossaries and statute texts are structured first; the model compares, fills and drafts against them — it does not score end-to-end like a black box.
+1. **Structure before generation.** Scoring points, glossaries and statute texts are structured first; the model compares, fills and drafts against them — scoring is computed by rules from structured evidence.
 2. **Verifiable beats fluent.** Page coverage, score totals and term backfill are checked by scripts. I would rather the pipeline crash than output something that merely *looks* complete.
-3. **Human review is not optional.** Model output is positioned as first draft / assisted scoring / retrieval summary; final authority stays with official rules and human experts.
+3. **Human review on every path.** Model output is positioned as first draft / assisted scoring / retrieval summary; final authority stays with official rules and human experts.
 4. **Hallucination must be traceable.** Citations keep anchors to the original text; medium/low confidence triggers forced re-review; anomalies are never silently swallowed.
 
 ---
