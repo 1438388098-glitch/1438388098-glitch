@@ -143,12 +143,14 @@
 | [maze-game](https://github.com/1438388098-glitch/maze-game) | 迷宫生成与寻路算法的游戏化实现（量化指标评测） |
 | [CS2D](https://github.com/1438388098-glitch/CS2D) | 自研 2D 俯视角射击游戏：16 轮 ADR 迭代 + 进化 AI 对战 |
 | [headphone-logger](https://github.com/1438388098-glitch/headphone-logger) | Windows 耳机连接事件日志（.NET 10，62 项单测） |
+| [PowerFlowStudio](https://github.com/1438388098-glitch/PowerFlowStudio) | 电力系统潮流计算 GUI——画布拖拽建模，pandapower 内核（牛顿-拉夫逊 / N-1 校核 / OPF / IEEE 算例库） |
+| [RollingPlan](https://github.com/1438388098-glitch/RollingPlan) | 计划滚动分配桌面应用——未完成的计划自动顺延到次日，全程可撤销 |
 | [playlist-analysis](https://github.com/1438388098-glitch/playlist-analysis) · [bilibili-progress-tracker](https://github.com/1438388098-glitch/bilibili-progress-tracker) | 多平台歌单分析 · B 站网课进度扩展 |
 | [poetry-site](https://github.com/1438388098-glitch/poetry-site) · [personal-website](https://github.com/1438388098-glitch/personal-website) | 个人诗集站（2021 至今，纯 PHP）· 个人主页 |
 
 </details>
 
-私有仓库中另有量化数据中台与社群情绪 Pipeline 两套数据系统，**架构与工程取舍欢迎交流**。
+私有仓库中另有一套社群情绪 Pipeline，**架构与工程取舍欢迎交流**。
 
 ---
 

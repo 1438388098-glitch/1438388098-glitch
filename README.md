@@ -135,12 +135,14 @@ My projects usually start from a real need of my own — studying for the exam, 
 | [maze-game](https://github.com/1438388098-glitch/maze-game) | Gamified maze generation & pathfinding with a quantitative evaluation harness |
 | [CS2D](https://github.com/1438388098-glitch/CS2D) | From-scratch 2D top-down shooter — 16 ADR-documented iterations, evolved AI bot ladder |
 | [headphone-logger](https://github.com/1438388098-glitch/headphone-logger) | Windows headphone connect/disconnect event logger (.NET 10, 62 unit tests) |
+| [PowerFlowStudio](https://github.com/1438388098-glitch/PowerFlowStudio) | Power-flow calculator GUI — drag-and-drop grid editing on pandapower (Newton–Raphson, N-1 check, OPF, IEEE test cases) |
+| [RollingPlan](https://github.com/1438388098-glitch/RollingPlan) | Rolling task planner desktop app — unfinished plan items auto-roll to the next day, full undo history |
 | [playlist-analysis](https://github.com/1438388098-glitch/playlist-analysis) · [bilibili-progress-tracker](https://github.com/1438388098-glitch/bilibili-progress-tracker) | Multi-platform playlist analyzer · Bilibili course-progress extension |
 | [poetry-site](https://github.com/1438388098-glitch/poetry-site) · [personal-website](https://github.com/1438388098-glitch/personal-website) | Personal poetry site since 2021 (plain PHP) · personal homepage |
 
 </details>
 
-Also in private repos: a quant data platform (A-share market data engineering) and a community-sentiment pipeline — architecture and trade-offs available on request.
+Also in private repos: a community-sentiment pipeline — architecture and trade-offs available on request.
 
 ---
 
