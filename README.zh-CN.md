@@ -196,7 +196,7 @@ AI 应用     Prompt / CoT 工程 · Multi-Agent 编排 · Agent Skills · 检�
 
 ## 联系与说明
 
-- 作品集：[iweistoicqc5.top](https://iweistoicqc5.top) · GitHub：[@1438388098-glitch](https://github.com/1438388098-glitch)
+- 作品集：[iweistoicqc5.top](https://iweistoicqc5.top) · GitHub：[@1438388098-glitch](https://github.com/1438388098-glitch) · Email: sww00316@163.com
 - 漏洞与安全问题请走 GitHub 私有漏洞报告（仓库 Security 页 → Report a vulnerability），见账号级 [SECURITY.md](https://github.com/1438388098-glitch/.github/blob/main/SECURITY.md)
 - 欢迎法律科技 / 法务科技 / AI 应用方向的交流与合作
 - 涉及考试、法条、数据的场景均以官方渠道与人工判断为准；AI 产出为辅助，不构成法律意见或官方评分
