@@ -173,7 +173,7 @@ These hold across everything I ship; happy to walk through the details:
 
 ## Contact
 
-- Portfolio site: [iweistoicqc5.top](https://iweistoicqc5.top) · GitHub: [@1438388098-glitch](https://github.com/1438388098-glitch)
+- Portfolio site: [iweistoicqc5.top](https://iweistoicqc5.top) · GitHub: [@1438388098-glitch](https://github.com/1438388098-glitch) · Email: sww00316@163.com
 - Security and vulnerability reports: GitHub private vulnerability reporting (repository Security tab → "Report a vulnerability"), described in the account-level [SECURITY.md](https://github.com/1438388098-glitch/.github/blob/main/SECURITY.md)
 - Open to conversations about legal tech, computational law and LLM evaluation — research collaboration especially welcome
 - Wherever exams, statutes or data are involved, official channels and human judgment prevail; AI output here is assistance only — not legal advice, not official scoring
