@@ -43,7 +43,7 @@
 - 判分由脚本按预登记的规则逐项核对，结果可复现
 - 每次发布前执行预注册统计协议，结果可复现
 - 代码 MIT · 公开数据 CC BY 4.0
-- 技术报告 v1 已随 [v0.6.0](https://github.com/1438388098-glitch/cn-judbench/releases/tag/v0.6.0) 发布
+- 技术报告 v1 已发布，最新 release [v0.6.1](https://github.com/1438388098-glitch/cn-judbench/releases/tag/v0.6.1)，报告作为 release 附件可下载
 
 `Benchmark` · `评测` · `可复现性`
 
@@ -83,8 +83,8 @@
 **法条混合检索底座——评测数字可复现**
 
 - 结构化分块 → LIKE/BM25/RRF 混合召回 → 强制条文级引用
-- 评测数字两套并列、不藏短：合成金标 **Recall@5 98.9%**；真实问句金标（38 条真实用户提问，来源全记录）**26.3% → 44.7%**（法律口语↔法言法语同义词典 + 查询扩展）——[每一步机制与剩余失败案例全记录](https://github.com/1438388098-glitch/statute-rag/blob/main/docs/retrieval-improvement.md)
-- 语义向量检索在计划中，到时候用同一套评测脚本对比
+- 评测数字两套并列、不藏短：合成金标 **Recall@5 100.0%**；真实问句金标（38 条真实用户提问，来源全记录）当前 v6/v7 条文级语料 **52.6%（20/38）**，R@30 94.7%，v0.1 时为 26.3%——[每一步机制与剩余失败案例全记录](https://github.com/1438388098-glitch/statute-rag/blob/main/docs/retrieval-improvement.md)
+- 可选的语义 / LLM 重排层用同一套评测脚本对比，默认关闭
 
 `Hybrid RAG` · `引用溯源` · `离线评测`
 
@@ -142,7 +142,7 @@
 | [fakao-tracker](https://github.com/1438388098-glitch/fakao-tracker) | 法考备考追踪：任务日历、打卡与统计（数据本地自备） |
 | [maze-game](https://github.com/1438388098-glitch/maze-game) | 迷宫生成与寻路算法的游戏化实现（量化指标评测） |
 | [CS2D](https://github.com/1438388098-glitch/CS2D) | 自研 2D 俯视角射击游戏：16 轮 ADR 迭代 + 进化 AI 对战 |
-| [headphone-logger](https://github.com/1438388098-glitch/headphone-logger) | Windows 耳机连接事件日志（.NET 10，62 项单测） |
+| [headphone-logger](https://github.com/1438388098-glitch/headphone-logger) | Windows 耳机连接事件日志（.NET 10，63 项单测，仅播放时记录） |
 | [PowerFlowStudio](https://github.com/1438388098-glitch/PowerFlowStudio) | 电力系统潮流计算 GUI——画布拖拽建模，pandapower 内核（牛顿-拉夫逊 / N-1 校核 / OPF / IEEE 算例库） |
 | [RollingPlan](https://github.com/1438388098-glitch/RollingPlan) | 计划滚动分配桌面应用——未完成的计划自动顺延到次日，全程可撤销 |
 | [playlist-analysis](https://github.com/1438388098-glitch/playlist-analysis) · [bilibili-progress-tracker](https://github.com/1438388098-glitch/bilibili-progress-tracker) | 多平台歌单分析 · B 站网课进度扩展 |
@@ -150,7 +150,14 @@
 
 </details>
 
-私有仓库中另有一套社群情绪 Pipeline，**架构与工程取舍欢迎交流**。
+### 也在做
+
+法律之外还有两个私有项目：
+
+- **`stock-db`**——A 股量化平台：5,824 只 A 股 / 1,674 万行日线（2000-01 至 2026-08），带新鲜度与质量门禁的每日调度，实盘 Top20 选股链（等权、半月换仓、行业 ≤4、ST/涨停过滤），实盘交易台账，外加一条 GP 因子挖掘研究线；688 项测试通过。
+- **社群情绪 Pipeline**——采集 → 分析 → Fear & Greed 日报看板。
+
+两个仓库均为私有，**架构与工程取舍欢迎交流**。
 
 ---
 
@@ -182,13 +189,15 @@ AI 应用     Prompt / CoT 工程 · Multi-Agent 编排 · Agent Skills · 检�
 ## 正在做
 
 - 法考主观题冲刺 + 大四课业
-- [cn-judbench](https://github.com/1438388098-glitch/cn-judbench)：扩充任务包、公开可复现榜单；技术报告 v1 已随 [v0.6.0](https://github.com/1438388098-glitch/cn-judbench/releases/tag/v0.6.0) 发布
-- [statute-rag](https://github.com/1438388098-glitch/statute-rag)：真实问句检索继续推进（已 26.3% → 44.7%），计划加语义向量检索
+- [cn-judbench](https://github.com/1438388098-glitch/cn-judbench)：扩充任务包、公开可复现榜单；技术报告 v1 已随 [v0.6.1](https://github.com/1438388098-glitch/cn-judbench/releases/tag/v0.6.1) 发布
+- [statute-rag](https://github.com/1438388098-glitch/statute-rag)：真实问句 Recall@5 当前 52.6%（v6/v7 条文级语料，R@30 94.7%），语义 / LLM 重排可选层用同一套脚本评测
 
 ---
 
 ## 联系与说明
 
+- 作品集：[iweistoicqc5.top](https://iweistoicqc5.top) · GitHub：[@1438388098-glitch](https://github.com/1438388098-glitch)
+- 漏洞与安全问题请走 GitHub 私有漏洞报告（仓库 Security 页 → Report a vulnerability），见账号级 [SECURITY.md](https://github.com/1438388098-glitch/.github/blob/main/SECURITY.md)
 - 欢迎法律科技 / 法务科技 / AI 应用方向的交流与合作
 - 涉及考试、法条、数据的场景均以官方渠道与人工判断为准；AI 产出为辅助，不构成法律意见或官方评分
 

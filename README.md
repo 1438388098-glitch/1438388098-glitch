@@ -40,7 +40,7 @@ My projects usually start from a real need of my own — studying for the exam, 
 - 12 task packs, 323 items, versioned and growing
 - Machine-checked scoring at the predicate level, fully auditable
 - Pre-registered statistical protocol before each release
-- First technical report released ([v0.6.0](https://github.com/1438388098-glitch/cn-judbench/releases/tag/v0.6.0))
+- Technical report v1 released — latest release [v0.6.1](https://github.com/1438388098-glitch/cn-judbench/releases/tag/v0.6.1), with the report attached as a downloadable asset
 - Code MIT · public data CC BY 4.0
 
 `Benchmark` · `Evaluation` · `Reproducibility`
@@ -79,8 +79,8 @@ My projects usually start from a real need of my own — studying for the exam, 
 **Hybrid retrieval base for statutes — with honest eval numbers**
 
 - Structured chunking → LIKE / BM25 / RRF fusion → forced article-level citations
-- Honest eval, both numbers shown: synthetic gold **Recall@5 98.9%**; real-question gold (38 real user questions, sources logged) **26.3% → 44.7%** via a legal colloquialism↔statute-phrase lexicon + query expansion — [every step and leftover failures documented](https://github.com/1438388098-glitch/statute-rag/blob/main/docs/retrieval-improvement.md)
-- A semantic-vector channel is next, to be evaluated with the same scripts
+- Honest eval, both numbers shown: synthetic gold **Recall@5 100.0%**; real-question gold (38 real user questions, sources logged) **52.6% (20/38)** on the current v6/v7 article-level corpus, up from 26.3% at v0.1 — [every step and leftover failures documented](https://github.com/1438388098-glitch/statute-rag/blob/main/docs/retrieval-improvement.md)
+- Optional semantic and LLM reranking layers are measured with the same scripts and stay off by default
 
 `Hybrid RAG` · `Citation Grounding` · `Offline Eval`
 
@@ -119,9 +119,10 @@ My projects usually start from a real need of my own — studying for the exam, 
 | Repo | What it does |
 |------|--------------|
 | [clause-scope](https://github.com/1438388098-glitch/clause-scope) | Contract clause extraction & risk flags — deterministic rule engine, span-level evidence, three tiers of findings (missing / unbalanced / vague) |
-| [legal-hallu-guard](https://github.com/1438388098-glitch/legal-hallu-guard) | Citation guardrails for legal answers — existence, quotation fidelity, assertion coverage; on a 14k-article real corpus: 0% false positives, 100% detection of fabricated / misquoted / uncited citations (constructed baseline) |
+| [legal-hallu-guard](https://github.com/1438388098-glitch/legal-hallu-guard) | Citation guardrails for legal answers — existence, quotation fidelity, assertion coverage; on a 14,212-article real corpus: 0% false positives, 100% detection of fabricated / misquoted / uncited citations (constructed baseline) |
 | [fakao-shuati](https://github.com/1438388098-glitch/fakao-shuati) | Self-hosted essay-exam practice platform — AI grading against scoring points, deep review reports, kanban & error book, zero native deps |
 | [legal-job-tracker](https://github.com/1438388098-glitch/legal-job-tracker) | Legal-hiring information platform — 33 official sources, dedup, résumé matching, application tracking; runs locally, data never leaves the machine |
+| [auto-iterate-project](https://github.com/1438388098-glitch/auto-iterate-project) | Autonomous project-iteration workflow — backlog ranked by value/risk, deterministic verification gates, LLM proposals kept separate |
 | [level-design-master](https://github.com/1438388098-glitch/level-design-master) | AI skill for 2D / metroidvania level design, with deterministic verification gates |
 
 <details>
@@ -134,7 +135,7 @@ My projects usually start from a real need of my own — studying for the exam, 
 | [fakao-tracker](https://github.com/1438388098-glitch/fakao-tracker) | Study tracker for the legal professional qualification exam — task calendar, check-ins, stats (data stays local) |
 | [maze-game](https://github.com/1438388098-glitch/maze-game) | Gamified maze generation & pathfinding with a quantitative evaluation harness |
 | [CS2D](https://github.com/1438388098-glitch/CS2D) | From-scratch 2D top-down shooter — 16 ADR-documented iterations, evolved AI bot ladder |
-| [headphone-logger](https://github.com/1438388098-glitch/headphone-logger) | Windows headphone connect/disconnect event logger (.NET 10, 62 unit tests) |
+| [headphone-logger](https://github.com/1438388098-glitch/headphone-logger) | Windows headphone connect/disconnect event logger, records only while sound is playing (.NET 10, 63 unit tests) |
 | [PowerFlowStudio](https://github.com/1438388098-glitch/PowerFlowStudio) | Power-flow calculator GUI — drag-and-drop grid editing on pandapower (Newton–Raphson, N-1 check, OPF, IEEE test cases) |
 | [RollingPlan](https://github.com/1438388098-glitch/RollingPlan) | Rolling task planner desktop app — unfinished plan items auto-roll to the next day, full undo history |
 | [playlist-analysis](https://github.com/1438388098-glitch/playlist-analysis) · [bilibili-progress-tracker](https://github.com/1438388098-glitch/bilibili-progress-tracker) | Multi-platform playlist analyzer · Bilibili course-progress extension |
@@ -142,7 +143,14 @@ My projects usually start from a real need of my own — studying for the exam, 
 
 </details>
 
-Also in private repos: a community-sentiment pipeline — architecture and trade-offs available on request.
+### Also building
+
+Beyond legal tech, two private projects:
+
+- **`stock-db`** — an A-share quantitative platform: 5,824 stocks / 16.7M daily bars (2000-01 to 2026-08), scheduled pipelines with freshness and quality gates, a live top-20 selection chain (equal-weight, half-month rebalance, industry cap, ST/limit-up filters), a real trading ledger, and a GP factor-mining research line; 688 passing tests.
+- **community-sentiment pipeline** — collection → analysis → a Fear & Greed daily dashboard.
+
+Both are private; architecture and trade-offs available on request.
 
 ---
 
@@ -161,10 +169,12 @@ These hold across everything I ship; happy to walk through the details:
 
 - Final-year LL.B. coursework & preparing for the essay round of the National Legal Professional Qualification Exam (法考)
 - Growing [cn-judbench](https://github.com/1438388098-glitch/cn-judbench): more task packs, a reproducible leaderboard; technical report v1 is out
-- [statute-rag](https://github.com/1438388098-glitch/statute-rag): pushing real-question retrieval further (26.3% → 44.7% Recall@5 done); a semantic-vector channel is planned
+- [statute-rag](https://github.com/1438388098-glitch/statute-rag): real-question Recall@5 now **52.6%** on the v6/v7 article-level corpus (R@30 94.7%); optional semantic and LLM reranking layers are measured on the same scripts
 
 ## Contact
 
+- Portfolio site: [iweistoicqc5.top](https://iweistoicqc5.top) · GitHub: [@1438388098-glitch](https://github.com/1438388098-glitch)
+- Security and vulnerability reports: GitHub private vulnerability reporting (repository Security tab → "Report a vulnerability"), described in the account-level [SECURITY.md](https://github.com/1438388098-glitch/.github/blob/main/SECURITY.md)
 - Open to conversations about legal tech, computational law and LLM evaluation — research collaboration especially welcome
 - Wherever exams, statutes or data are involved, official channels and human judgment prevail; AI output here is assistance only — not legal advice, not official scoring
 
