@@ -8,6 +8,8 @@
 
 I build tools that run the rule-heavy, text-heavy, verification-heavy parts of legal work with agents and LLMs. A few of them are products I use daily, and the pitfalls and limits I hit along the way are documented in each repo.
 
+**[iweistoicqc5.top](https://iweistoicqc5.top)** — project case studies, engineering notes and exam-prep records
+
 `Legal Tech` · `LLM Application Engineering` · `Retrieval / Evaluation` · `Human-in-the-loop`
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)

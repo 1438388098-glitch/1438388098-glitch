@@ -10,6 +10,8 @@
 
 用 Agent 和 LLM 把法律流程里规则性强、文本量大、需要反复核对的环节做成能跑的工具。有几个是我自己每天在用的产品，踩过的坑和边界都记录在各仓库里。
 
+**[iweistoicqc5.top](https://iweistoicqc5.top)** — 项目案例、技术写作与备考记录
+
 `法律科技` · `LLM 应用工程` · `检索增强 / 评测` · `人机复核`
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
